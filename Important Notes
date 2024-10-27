@@ -1,0 +1,3 @@
+ COMMON MISTAKES
+
+1. There should only one WHERE clause in a query, the subquery might contain more, but only one WHERE in a query. 
