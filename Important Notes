@@ -1,3 +1,15 @@
  COMMON MISTAKES
 
 1. There should only one WHERE clause in a query, the subquery might contain more, but only one WHERE in a query. 
+
+2. JOIN statements are very versatile and be written as follows
+https://leetcode.com/problems/average-selling-price/?envType=study-plan-v2&envId=top-sql-50
+SELECT p.product_id, IFNULL(ROUND(SUM(p.price*u.units)/SUM(u.units),2), 0) average_price 
+FROM prices p
+LEFT JOIN UnitsSold u 
+on p.product_id = u.product_id AND  
+u.purchase_date BETWEEN p.start_date AND end_date
+GROUP BY p.product_id;
+
+3. DATE-TIME should be enclosed in ''
+2019-06-28 IS Wrong        '2019-06-28' IS Correct
