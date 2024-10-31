@@ -13,3 +13,8 @@ GROUP BY p.product_id;
 
 3. DATE-TIME should be enclosed in ''
 2019-06-28 IS Wrong        '2019-06-28' IS Correct
+
+4. Given a table student -> name, id <- ALL STUDENTS AE IN THIS TABLE
+marks in olympiad -> student_id, subject, marks <- ONLY THOSE WHO APPEARED IN OLYMPIAD ARE IN THIS TABLE
+IF I have to tell which student didn't appear in olympiad exam
+SELECT name FROM student WHERE id NOT IN (SELECT student_id FROM marks);
