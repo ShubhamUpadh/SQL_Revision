@@ -18,3 +18,19 @@ GROUP BY p.product_id;
 marks in olympiad -> student_id, subject, marks <- ONLY THOSE WHO APPEARED IN OLYMPIAD ARE IN THIS TABLE
 IF I have to tell which student didn't appear in olympiad exam
 SELECT name FROM student WHERE id NOT IN (SELECT student_id FROM marks);
+
+5. Given a table 
+Sports_total -> sports_id, sports_nmae
+Sports_played -> student_id, sports_id
+We want to calculate what is % of total sports played by a particular student
+
+SELECT sp.student_id, ROUND((COUNT(sports_id)/(SELECT COUNT(DISTINCT(sports_id)) FROM sports_total) * 100), 2)
+FROM sports_played sp
+ORDER BY student_id;
+
+6. ORDER BY should occur before GROUP BY
+
+
+
+
+
