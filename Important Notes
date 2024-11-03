@@ -30,7 +30,18 @@ ORDER BY student_id;
 
 6. ORDER BY should occur before GROUP BY
 
+7. INNER JOIN me jab ek hi row pe check lagana tab AND
+Otherwise use WHERE
+Select student_name, class
+FROM school
+INNER JOIN school ON student_name = student_name
+AND marks_in_final > marks_in_half_yearly;
 
+VS
+Select student_name, class
+FROM school
+INNER JOIN school ON student_name = student_name
+WHERE (marks_in_final, attendance_in_last_quarter) > (SELECT marks_in_half_yearly, attendance_in_first_quarter FROM school);
 
 
 
