@@ -43,5 +43,8 @@ FROM school
 INNER JOIN school ON student_name = student_name
 WHERE (marks_in_final, attendance_in_last_quarter) > (SELECT marks_in_half_yearly, attendance_in_first_quarter FROM school);
 
-
+8. Table -> employee
+id | name | department | managerId
+We are required to find the number of managers with at least 5 reporters
+Always remember in such cases to find the PRIMARY KEY, as the name can be REPEATED.
 
