@@ -48,3 +48,9 @@ id | name | department | managerId
 We are required to find the number of managers with at least 5 reporters
 Always remember in such cases to find the PRIMARY KEY, as the name can be REPEATED.
 
+
+9. There's this deadly keyword
+LIMIT 
+SELECT * FROM users
+LIMIT 1 OFFSET 10;
+This will skip the first 10 rows and display only 1 next row
