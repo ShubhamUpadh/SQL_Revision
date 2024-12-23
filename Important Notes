@@ -58,8 +58,11 @@ This will skip the first 10 rows and display only 1 next row
 10. Union keyword is used to combine the query results from same or different table
 It must be ensured that the number of columns being printed and the data types of these columns should be same for the queries.
 SELECT name FROM students
-union
+UNION
 SELECT name FROM teachers,
+
+UNION allows only unique values 
+whereas, UNIONALL allow all duplicate values too.
 
 
 
