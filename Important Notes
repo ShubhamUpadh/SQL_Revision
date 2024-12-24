@@ -66,4 +66,14 @@ whereas, UNIONALL allow all duplicate values too.
 
 
 
+11. SELECT * FROM (
+    SELECT * FROM users1 ORDER BY id ASC LIMIT 1
+    )
+    UNION ALL
+    SELECT * FROM (
+    SELECT * FROM users1 ORDER BY id DESC LIMIT 1)
+
+This will give us the first and last rows
+
+
 
